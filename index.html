@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ДЗ 22. Рекурсивне зведення в ступінь</title>
+  </head>
+  <body>
+    <script>
+      //Реалізувати рекурсивну функцію, яка зводить число в ступінь.
+      // Число, яке треба піднести до ступеню, передається як перший аргумент у функції;
+      // Ступінь передається як другий аргумент у функцію pow (num, degree).
+
+      // Define elements
+      let num = prompt(
+        "1. Напишіть число, яке треба піднести до ступеню (num)"
+      );
+      let degree = prompt(
+        "2. Напишіть ступінь, до якої треба піднести число (degree)"
+      );
+
+      // Function
+      function pow(num, degree) {
+        if (degree == 1) {
+          return num;
+        } else {
+          return num * pow(num, degree - 1);
+        }
+      }
+
+      alert(pow(num, degree));
+    </script>
+  </body>
 </html>
